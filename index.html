@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CK Editor Custom Element</title>
+  <!-- Kontent Styling -->
+  <link rel="stylesheet" href="custom-element.css" />
+  <link rel="stylesheet" href="ckeditor-additional-styles.css" />
+  <!-- Kentico Custom elements API-->
+  <script src="https://app.kontent.ai/js-api/custom-element/v1/custom-element.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.13.1/full-all/ckeditor.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/rxjs@6.4.0/bundles/rxjs.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@kentico/kontent-delivery/_bundles/kontent-delivery.browser.umd.min.js"></script>
+
+</head>
+
+<body>
+  <!-- <div id="fb-root"></div>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script> -->
+
+  <!-- Custom element HTML -->
+  <!-- <textarea id="editor">
+    [[formassembly formid=373781 server="https://ncoa.tfaforms.net"]]
+    [pardot-form id="6182" title="NCOA Email Sign Up" height="1600" scrolling="no" ]
+  </textarea> -->
+  <textarea id="editor"></textarea>
+
+  <script src="utilities.js"></script>
+  <script src="ckeditor-shortcode.js"></script>
+
+  <script src="ckeditor.js"></script>
+</body>
+
+</html>
