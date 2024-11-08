@@ -30,7 +30,7 @@ CKEDITOR.addStylesSet('customstyleset', [
   },
 ]);
 
-function initializeCKEditor(element, basePath = '/') {
+function initializeCKEditor(element, basePath = '') {
 	const additionalPlugins = [
 		'kontentimage',
 		'kontentlink',
