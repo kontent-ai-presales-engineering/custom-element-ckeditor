@@ -50,7 +50,6 @@
 			editor.ui.addButton && editor.ui.addButton( 'Voter Voice Embed', {
 				label: 'Voter Voice Embed',
 				command: 'insertVoterVoice',
-				// toolbar: 'kentico_toolbar',
 				icon: this.path + 'icons/embed.png'
 			});
     }

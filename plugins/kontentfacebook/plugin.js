@@ -49,7 +49,6 @@
 			editor.ui.addButton && editor.ui.addButton( 'Facebook Video', {
 				label: 'Facebook Video',
 				command: 'insertFBVideo',
-				// toolbar: 'kentico_toolbar',
 				icon: this.path + 'icons/facebook.png'
 			});
     }

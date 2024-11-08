@@ -30,7 +30,7 @@ CKEDITOR.addStylesSet('customstyleset', [
   },
 ]);
 
-function initializeCKEditor(element, basePath = '/kontent-custom-element-ckeditor') {
+function initializeCKEditor(element, basePath = '/') {
 	const additionalPlugins = [
 		'kontentimage',
 		'kontentlink',
@@ -99,12 +99,6 @@ function initializeCKEditor(element, basePath = '/kontent-custom-element-ckedito
     if (toolbar) config.toolbarGroups = toolbar;
     item_url_macro = element.config.itemUrlMacro; // load url macro for item hyperlinks
   }
-
-  // config.toolbarGroups = config.toolbarGroups || [];
-  // config.toolbarGroups.push({
-  //   name: 'kentico_toolbar',
-  //   groups: [ 'document' ]
-  // });
 
   CKEDITOR.config.stylesCombo_stylesSet = 'customstyleset';
 

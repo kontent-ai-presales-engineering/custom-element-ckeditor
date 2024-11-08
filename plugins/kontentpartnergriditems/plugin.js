@@ -85,14 +85,6 @@
 		    	// iframe.src = `https://www.youtube.com/embed/${this.data.youtubeID}`;
 		    }
 	    });
-
-	    // Add toolbar button for this plugin.
-			// editor.ui.addButton && editor.ui.addButton( '2 Columns', {
-			// 	label: '2 Columns',
-			// 	command: 'insertColumns',
-			// 	// toolbar: 'kentico_toolbar',
-			// 	icon: this.path + 'icons/columns.png'
-			// });
     },
 
 	});

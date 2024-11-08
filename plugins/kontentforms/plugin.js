@@ -57,7 +57,6 @@
 			editor.ui.addButton && editor.ui.addButton( 'Forms', {
 				label: 'Form',
 				command: 'insertForm',
-				// toolbar: 'kentico_toolbar',
 				icon: this.path + 'icons/form.png'
 			});
     }

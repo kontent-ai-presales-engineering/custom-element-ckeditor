@@ -49,7 +49,6 @@
 			editor.ui.addButton && editor.ui.addButton( 'Vimeo', {
 				label: 'Vimeo',
 				command: 'insertVimeoVideo',
-				// toolbar: 'kentico_toolbar',
 				icon: this.path + 'icons/vimeo.png'
 			});
     }

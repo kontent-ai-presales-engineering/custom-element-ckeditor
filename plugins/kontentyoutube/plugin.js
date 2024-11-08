@@ -56,7 +56,6 @@
 			editor.ui.addButton && editor.ui.addButton( 'Youtube', {
 				label: 'Youtube',
 				command: 'insertYoutubeVideo',
-				// toolbar: 'kentico_toolbar',
 				icon: this.path + 'icons/youtube.png'
 			});
     }

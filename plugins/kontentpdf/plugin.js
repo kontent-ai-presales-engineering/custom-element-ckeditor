@@ -54,7 +54,6 @@
 			editor.ui.addButton && editor.ui.addButton( 'PDF', {
 				label: 'PDF',
 				command: 'insertPDF',
-				// toolbar: 'kentico_toolbar',
 				icon: this.path + 'icons/kontentpdf.png'
 			});
     }

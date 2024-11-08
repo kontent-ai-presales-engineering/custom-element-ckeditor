@@ -13,33 +13,33 @@
 	CKEDITOR.plugins.add(pluginName, {
 		requires: 'widget,dialog',
 
-    // icons: 'form',
+		// icons: 'form',
 
-    init: function( editor ) {
-    	// Add dialog
-			CKEDITOR.dialog.add( pluginName, this.path + `dialogs/${pluginName}.js` );
+		init: function (editor) {
+			// Add dialog
+			CKEDITOR.dialog.add(pluginName, this.path + `dialogs/${pluginName}.js`);
 
 			// Add command
-			editor.addCommand( 'insertFile', new CKEDITOR.dialogCommand( pluginName ));
+			editor.addCommand('insertFile', new CKEDITOR.dialogCommand(pluginName));
 
-      editor.widgets.add( pluginName, {
-      	// button: pluginName,
-	      template,
-	      // template: "Test",
-	    	dialog: pluginName,
-	    	allowedContent: `div(!${pluginName})`,
-	    	requiredContent: `div(${pluginName})`,
-	    	upcast: function( element ) {
-					return element.name == 'div' && element.hasClass( pluginName );
-		    },
-		    init() {
-		    	const element = this.element.$;
-		    	this.setData('file', element.dataset.file);
-		    },
-		    upcast(element) {
-		    	return element.hasClass(pluginName);
-		    },
-		    data() {
+			editor.widgets.add(pluginName, {
+				// button: pluginName,
+				template,
+				// template: "Test",
+				dialog: pluginName,
+				allowedContent: `div(!${pluginName})`,
+				requiredContent: `div(${pluginName})`,
+				upcast: function (element) {
+					return element.name == 'div' && element.hasClass(pluginName);
+				},
+				init() {
+					const element = this.element.$;
+					this.setData('file', element.dataset.file);
+				},
+				upcast(element) {
+					return element.hasClass(pluginName);
+				},
+				data() {
 					const url = this.data.file;
 					const fileName = url.split('/').pop().split('.')[0];
 					const fileType = url.split('/').pop().split('.')[1];
@@ -49,27 +49,26 @@
 					const downloadBtnNode = this.element.$.querySelector('.download__btn');
 
 					if (fileNameNode) {
-							fileNameNode.innnerHTML = fileName;
+						fileNameNode.innnerHTML = fileName;
 					}
 
 					if (fileMetaNode) {
-							fileMetaNode.innnerHTML = `.${ fileType }`;
+						fileMetaNode.innnerHTML = `.${fileType}`;
 					}
 
 					if (downloadBtnNode) {
-							downloadBtnNode.setAttribute('href', url);
-							downloadBtnNode.setAttribute('download', fileName);
+						downloadBtnNode.setAttribute('href', url);
+						downloadBtnNode.setAttribute('download', fileName);
 					}
-		    }
-	    });
+				}
+			});
 
-	    // Add toolbar button for this plugin.
-			editor.ui.addButton && editor.ui.addButton( 'File', {
+			// Add toolbar button for this plugin.
+			editor.ui.addButton && editor.ui.addButton('File', {
 				label: 'File',
 				command: 'insertFile',
-				// toolbar: 'kentico_toolbar',
 				icon: this.path + 'icons/kontentdownload.png'
 			});
-    }
+		}
 	});
 })();
